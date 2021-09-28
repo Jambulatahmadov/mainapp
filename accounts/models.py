@@ -20,3 +20,11 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.email
+
+
+class ProductModel(models.Model):
+    title = models.CharField(max_length=250, verbose_name='Название товара')
+    description = models.TextField(verbose_name='Описание товара')
+    price = models.DecimalField(max_digits=9, decimal_places=2, verbose_name='Цена товара')
+
+
