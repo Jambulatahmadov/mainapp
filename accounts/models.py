@@ -27,4 +27,7 @@ class ProductModel(models.Model):
     description = models.TextField(verbose_name='Описание товара')
     price = models.DecimalField(max_digits=9, decimal_places=2, verbose_name='Цена товара')
 
+    def __str__(self):
+        return self.title
+
 
